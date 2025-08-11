@@ -1,4 +1,3 @@
-package StringConcat;
 
 public class StringConcat {
 
