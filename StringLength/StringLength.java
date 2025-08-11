@@ -1,4 +1,3 @@
-package StringLength;
 
 public class StringLength {
 
