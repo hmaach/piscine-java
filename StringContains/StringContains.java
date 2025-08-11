@@ -2,8 +2,7 @@
 public class StringContains {
 
     public static boolean isStringContainedIn(String subString, String s) {
-        if (s == null) s = "";
-        if (subString == null) subString = "";
+        if (s == null || subString == null) return false;
 
         return s.contains(subString);
     }
