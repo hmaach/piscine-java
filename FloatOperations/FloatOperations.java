@@ -1,4 +1,3 @@
-package FloatOperations;
 
 public class FloatOperations {
 
