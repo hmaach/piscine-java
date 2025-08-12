@@ -1,7 +1,10 @@
 
+import java.util.Arrays;
+
 public class ComputeArray {
 
     public static int[] computeArray(int[] array) {
+        System.out.println("Input array: " + Arrays.toString(array));
         int[] new_array = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             int nb = array[i];
