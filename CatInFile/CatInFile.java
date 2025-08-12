@@ -1,4 +1,3 @@
-package CatInFile;
 
 import java.io.*;
 
