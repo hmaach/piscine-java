@@ -69,7 +69,7 @@ public class CleanExtract {
             }
         }
 
-        return res.toString();
+        return res.toString().trim();
     }
 
     public static int countChar(String s, Character c) {
