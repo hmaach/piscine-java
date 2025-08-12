@@ -4,12 +4,15 @@ public class CleanExtract {
     public static String extract(String s) {
         StringBuilder res = new StringBuilder();
         String[] parts = s.split("\\|");
-        for (String part : parts) {
+        for (int partIdx = 0; partIdx < parts.length; partIdx++) {
+            String part = parts[partIdx];
             String trimmedPart = part.trim();
             if (!trimmedPart.contains(".")) {
                 if (trimmedPart.length() > 0) {
                     res.append(trimmedPart);
-                    res.append(' ');
+                    if (partIdx < parts.length - 1) {
+                        res.append(' ');
+                    }
                 }
             } else if (countChar(trimmedPart, '.') == 1) {
                 Boolean dot_found = false;
@@ -26,7 +29,9 @@ public class CleanExtract {
 
                 if (cleaned_str.length() > 0) {
                     res.append(cleaned_str.toString().trim());
-                    res.append(' ');
+                    if (partIdx < parts.length - 1) {
+                        res.append(' ');
+                    }
                 }
             } else {
                 int first_dot = 0;
@@ -57,7 +62,9 @@ public class CleanExtract {
 
                 if (cleaned_str.length() > 0) {
                     res.append(cleaned_str.toString().trim());
-                    res.append(' ');
+                    if (partIdx < parts.length - 1) {
+                        res.append(' ');
+                    }
                 }
             }
         }
