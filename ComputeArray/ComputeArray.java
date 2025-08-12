@@ -1,24 +1,19 @@
-
-import java.util.Arrays;
-
+// import java.util.Arrays;
 public class ComputeArray {
 
     public static int[] computeArray(int[] array) {
-        System.out.println("Input array: " + Arrays.toString(array));
         int[] new_array = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             int nb = array[i];
-            if (nb % 3 == 0) {
-                new_array[i] = nb * 5;
-            } else {
-                if ((nb % 3) % 2 == 0) {
-                    new_array[i] = nb;
-                } else if ((nb % 3) % 1 == 0) {
-                    new_array[i] = nb + 7;
-                }
+            int mod = nb % 3;
+
+            switch (mod) {
+                case 0 -> new_array[i] = nb * 5;
+                case 1 -> new_array[i] = nb + 7;
+                default -> new_array[i] = nb;
             }
         }
-
         return new_array;
     }
+
 }
