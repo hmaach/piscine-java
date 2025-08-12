@@ -1,4 +1,3 @@
-package CleanExtract;
 
 public class CleanExtract {
 
