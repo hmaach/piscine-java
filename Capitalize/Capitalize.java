@@ -9,8 +9,8 @@ public class Capitalize {
             throw new IOException("invalid number of args");
         }
 
-        File file = new File(args[0]);
-        try (Scanner in = new Scanner(file); OutputStream out = new FileOutputStream(args[1])) {
+        File file = new File(args[0] + ".txt");
+        try (Scanner in = new Scanner(file); OutputStream out = new FileOutputStream(args[1] + ".txt")) {
             while (in.hasNext()) {
                 String word = in.next();
 
