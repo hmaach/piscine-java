@@ -89,6 +89,6 @@ public class CelestialObject {
 
     @Override
     public int hashCode() {
-        return Objects.hash(x, y, z);
+        return Objects.hash(this.name, this.x, this.y, this.z);
     }
 }
