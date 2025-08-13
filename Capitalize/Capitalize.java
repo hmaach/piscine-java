@@ -1,5 +1,7 @@
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Capitalize {
@@ -8,6 +10,9 @@ public class Capitalize {
         if (args.length != 2) {
             throw new IOException("invalid number of args");
         }
+
+        String content = Files.readString(Paths.get(args[0]));
+        System.out.println(content);
 
         File file = new File(args[0]);
         try (Scanner in = new Scanner(file); OutputStream out = new FileOutputStream(args[1])) {
