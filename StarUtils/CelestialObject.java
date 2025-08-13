@@ -1,5 +1,7 @@
-// package StarUtils;
 
+import java.util.Objects;
+
+// package StarUtils;
 public class CelestialObject {
 
     private double x;
@@ -87,10 +89,6 @@ public class CelestialObject {
 
     @Override
     public int hashCode() {
-        int result = 1000;
-        result *= (int) this.x + 654645;
-        result *= (int) this.y + 5454654;
-        result *= (int) this.z - 65464;
-        return result;
+        return Objects.hash(x, y, z);
     }
 }
