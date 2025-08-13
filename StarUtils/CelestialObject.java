@@ -75,7 +75,14 @@ public class CelestialObject {
 
     @Override
     public boolean equals(Object obj) {
-        return this.x == ((CelestialObject) obj).getX() && this.y == ((CelestialObject) obj).getY() && this.z == ((CelestialObject) obj).getZ();
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        CelestialObject other = (CelestialObject) obj;
+        return this.x == other.getX() && this.y == other.getY() && this.z == other.getZ();
     }
 
     @Override
