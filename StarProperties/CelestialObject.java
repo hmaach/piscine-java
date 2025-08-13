@@ -1,4 +1,3 @@
-package StarProperties;
 
 public class CelestialObject {
 
