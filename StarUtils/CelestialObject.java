@@ -84,7 +84,7 @@ public class CelestialObject {
             return false;
         }
         CelestialObject other = (CelestialObject) obj;
-        return this.x == other.getX() && this.y == other.getY() && this.z == other.getZ();
+        return this.x == other.getX() && this.y == other.getY() && this.z == other.getZ() && this.name.equals(other.getName());
     }
 
     @Override
