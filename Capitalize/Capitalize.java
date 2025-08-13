@@ -1,4 +1,3 @@
-package Capitalize;
 
 import java.io.*;
 import java.util.Scanner;
@@ -14,7 +13,7 @@ public class Capitalize {
         try (Scanner in = new Scanner(file); OutputStream out = new FileOutputStream(args[1])) {
             while (in.hasNext()) {
                 String word = in.next();
-                
+
                 String firstLetter = word.substring(0, 1).toUpperCase();
                 String restOfWord = word.substring(1);
                 String capitalized = firstLetter + restOfWord;
