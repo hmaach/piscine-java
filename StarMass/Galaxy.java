@@ -25,13 +25,13 @@ public class Galaxy {
 
         Map<String, Integer> hashmap = new HashMap<>();
 
+        hashmap.put("Star", 0);
+        hashmap.put("Planet", 0);
+        hashmap.put("Other", 0);
+
         for (CelestialObject obj : this.celestialObjects) {
             String type;
 
-            hashmap.getOrDefault("Star", 0);
-            hashmap.getOrDefault("Planet", 0);
-            hashmap.getOrDefault("Other", 0);
-            
             if (obj instanceof Star) {
                 type = "Star";
             } else if (obj instanceof Planet) {
@@ -40,7 +40,7 @@ public class Galaxy {
                 type = "Other";
             }
 
-            int currentMass = hashmap.getOrDefault(type, 0);
+            int currentMass = hashmap.get(type);
             hashmap.put(type, currentMass + (int) obj.getMass());
         }
 
