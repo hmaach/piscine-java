@@ -1,4 +1,4 @@
-package StarInheritance;
+// package StarInheritance;
 
 public class Star extends CelestialObject {
 

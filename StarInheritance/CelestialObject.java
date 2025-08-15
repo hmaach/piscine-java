@@ -1,5 +1,5 @@
 
-package StarInheritance;
+// package StarInheritance;
 
 import java.util.Objects;
 
