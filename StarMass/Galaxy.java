@@ -28,15 +28,16 @@ public class Galaxy {
         for (CelestialObject obj : this.celestialObjects) {
             String type;
 
+            hashmap.getOrDefault("Star", 0);
+            hashmap.getOrDefault("Planet", 0);
+            hashmap.getOrDefault("Other", 0);
+            
             if (obj instanceof Star) {
                 type = "Star";
-                hashmap.getOrDefault("Star", 0);
             } else if (obj instanceof Planet) {
                 type = "Planet";
-                hashmap.getOrDefault("Planet", 0);
             } else {
                 type = "Other";
-                hashmap.getOrDefault("Other", 0);
             }
 
             int currentMass = hashmap.getOrDefault(type, 0);
