@@ -2,7 +2,6 @@
 
 // import Adventure.Healer;
 // import Adventure.Character;
-
 public class Sorcerer extends Character implements Healer {
 
     private int healCapacity;
@@ -28,10 +27,13 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void heal(Character character) {
-        this.currentHealth += this.healCapacity;
-        if (this.currentHealth > this.getMaxHealth()) {
-            this.currentHealth = this.getMaxHealth();
+        int newHealth = character.getCurrentHealth() + this.healCapacity;
+
+        if (newHealth > character.getMaxHealth()) {
+            newHealth = character.getMaxHealth();
         }
+
+        character.currentHealth = newHealth;
     }
 
 }
