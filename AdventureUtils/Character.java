@@ -34,13 +34,13 @@ public class Character {
         StringBuilder status = new StringBuilder();
 
         status.append("------------------------------------------\n");
-        if (Character.allCharacters.isEmpty()) {
+
+        if (allCharacters.isEmpty()) {
             status.append("Nobody's fighting right now !\n");
         } else {
             status.append("Characters currently fighting : \n");
-
-            for (Character character : Character.allCharacters) {
-                status.append(String.format(" - %s%n", character.toString()));
+            for (Character character : allCharacters) {
+                status.append(String.format(" - %s\n", character.toString()));
             }
         }
 
