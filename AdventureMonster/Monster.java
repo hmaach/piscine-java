@@ -2,20 +2,16 @@
 
 public class Monster extends Character {
 
-    private final int maxHealth = 0;
-    private int currentHealth;
-    private final String name = null;
-
     public Monster(String name, int maxHealth) {
         super(name, maxHealth);
     }
 
     @Override
     public String toString() {
-        if (this.currentHealth == 0) {
-            return String.format("%s is a monster and is dead", this.name);
+        if (this.getCurrentHealth() == 0) {
+            return String.format("%s is a monster and is dead", this.getName());
         } else {
-            return String.format("%s is a monster with %d HP", this.name, this.currentHealth);
+            return String.format("%s is a monster with %d HP", this.getName(), this.getCurrentHealth());
         }
     }
 }
