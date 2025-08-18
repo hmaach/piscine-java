@@ -33,7 +33,7 @@ public class Sorcerer extends Character implements Healer {
             newHealth = character.getMaxHealth();
         }
 
-        character.currentHealth = newHealth;
+        character.setCurrentHealth(newHealth);
     }
 
 }

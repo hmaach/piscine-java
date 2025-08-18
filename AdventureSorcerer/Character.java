@@ -8,7 +8,8 @@ public class Character {
     private static List<Character> allCharacters = new ArrayList<>();
 
     private final int maxHealth;
-    protected int currentHealth;
+    private int currentHealth;
+
     private final String name;
 
     public Character(String name, int maxHealth) {
@@ -24,6 +25,10 @@ public class Character {
 
     public int getCurrentHealth() {
         return currentHealth;
+    }
+
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
     }
 
     public String getName() {
