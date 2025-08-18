@@ -1,9 +1,7 @@
+package AdventureUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-
-// package AdventureUtils;
-
 
 public class Character {
 
@@ -46,7 +44,7 @@ public class Character {
             }
         }
 
-        status.append("------------------------------------------");
+        status.append("------------------------------------------\n");
 
         return status.toString();
     }
