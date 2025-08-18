@@ -38,7 +38,7 @@ public class Character {
         if (allCharacters.isEmpty()) {
             status.append("Nobody's fighting right now !\n");
         } else {
-            status.append("Characters currently fighting : \n");
+            status.append("Characters currently fighting :\n");
             for (Character character : allCharacters) {
                 status.append(String.format(" - %s\n", character.toString()));
             }
