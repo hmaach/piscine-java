@@ -2,6 +2,10 @@
 
 public class Monster extends Character {
 
+    private final int maxHealth = 0;
+    private int currentHealth;
+    private final String name = null;
+
     public Monster(String name, int maxHealth) {
         super(name, maxHealth);
     }
