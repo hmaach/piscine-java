@@ -19,7 +19,7 @@ public class Weapon {
 
     @Override
     public String toString() {
-        return String.format("%s deals %d damages.", this.name, this.damage);
+        return String.format("%s deals %d damages", this.name, this.damage);
     }
 
 }

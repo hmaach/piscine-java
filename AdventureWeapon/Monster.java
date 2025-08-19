@@ -15,7 +15,7 @@ public class Monster extends Character {
             res = String.format("%s is a monster with %d HP.", this.getName(), this.getCurrentHealth());
         }
 
-        return res + " He has the weapon " + this.getWeapon().toString();
+        return res + " He has the weapon " + this.getWeapon().toString() + ".";
     }
 
     @Override

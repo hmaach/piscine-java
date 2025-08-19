@@ -41,7 +41,7 @@ public class Templar extends Character implements Healer, Tank {
             );
         }
 
-        return res + " He has the weapon " + this.getWeapon().toString();
+        return res + " He has the weapon " + this.getWeapon().toString() + ".";
     }
 
     @Override
