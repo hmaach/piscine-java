@@ -27,11 +27,12 @@ public class ListSearchIndex {
     }
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
-        if (list == null) {
-            return null;
-        }
         List<Integer> indexes = new ArrayList<>();
         Integer idx = 0;
+        
+        if (list == null) {
+            return indexes;
+        }
 
         for (Integer elem : list) {
             if (elem.equals(value)) {
