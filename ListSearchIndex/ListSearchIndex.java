@@ -5,11 +5,19 @@ import java.util.List;
 public class ListSearchIndex {
 
     public static Integer findLastIndex(List<Integer> list, Integer value) {
-        return list.lastIndexOf(value);
+        Integer idx = list.lastIndexOf(value);
+        if (idx == -1) {
+            return null;
+        }
+        return idx;
     }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
-        return list.indexOf(value);
+        Integer idx = list.indexOf(value);
+        if (idx == -1) {
+            return null;
+        }
+        return idx;
     }
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
