@@ -6,10 +6,13 @@ public class RegexReplace {
 
     public static String removeUnits(String s) {
 
-        Pattern pattern = Pattern.compile("(?<=\\d+)(cm|€)((?=\\b(?!²))|(?=\\s*$))");
+        Pattern pattern = Pattern.compile("(?<=\\d+)(cm|€)((?=\\b(?![²\\w]))|(?=\\s)|(?=\\s*$))");
         Matcher matcher = pattern.matcher(s);
 
         return matcher.replaceAll("");
+        // result = result.replaceAll("(?<=\\d)(€)(?=\\W)", "");
+
+        // return result;
     }
 
     public static String obfuscateEmail(String s) {
@@ -25,9 +28,15 @@ public class RegexReplace {
 
                 int minIdx = Integer.MAX_VALUE;
 
-                if (pointIdx != -1) minIdx = Math.min(minIdx, pointIdx);
-                if (dashIdx != -1) minIdx = Math.min(minIdx, dashIdx);
-                if (underSIdx != -1) minIdx = Math.min(minIdx, underSIdx);
+                if (pointIdx != -1) {
+                    minIdx = Math.min(minIdx, pointIdx);
+                }
+                if (dashIdx != -1) {
+                    minIdx = Math.min(minIdx, dashIdx);
+                }
+                if (underSIdx != -1) {
+                    minIdx = Math.min(minIdx, underSIdx);
+                }
 
                 res.append(parts[0].substring(0, minIdx + 1));
                 res.append(String.valueOf('*').repeat(parts[0].substring(minIdx + 1).length()));
