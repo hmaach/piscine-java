@@ -6,7 +6,7 @@ public class RegexReplace {
 
     public static String removeUnits(String s) {
 
-        Pattern pattern = Pattern.compile("(?<=\\d+)(cm|€)((?=\\b)|(?=\\s*$))");
+        Pattern pattern = Pattern.compile("(?<=\\d+)(cm|€)((?=\\b(?!²))|(?=\\s*$))");
         Matcher matcher = pattern.matcher(s);
 
         return matcher.replaceAll("");
