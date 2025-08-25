@@ -11,7 +11,7 @@ public class DifferenceBetweenDate {
         if (localTime1 == null || localTime2 == null) {
             return null;
         }
-        return Duration.between(localTime1, localTime2);
+        return Duration.between(localTime1, localTime2).abs();
     }
 
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
