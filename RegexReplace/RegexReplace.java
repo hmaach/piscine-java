@@ -64,11 +64,7 @@ public class RegexReplace {
                 } else if (domains.length == 3) {
                     res.append(domains[1]);
                     res.append('.');
-                    if (domains[2].equals("com") || domains[2].equals("org") || domains[2].equals("net")) {
-                        res.append(domains[2]);
-                    } else {
-                        res.append(String.valueOf('*').repeat(domains[2].length()));
-                    }
+                    res.append(String.valueOf('*').repeat(domains[2].length()));
                 }
             }
 
