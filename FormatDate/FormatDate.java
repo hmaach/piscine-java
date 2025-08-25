@@ -12,7 +12,7 @@ public class FormatDate {
             return null;
         }
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM", Locale.FRANCE);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMM", Locale.FRANCE);
 
         int year = dateTime.getYear();
         String month = dateTime.format(formatter);
