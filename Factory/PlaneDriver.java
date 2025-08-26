@@ -1,5 +1,5 @@
 
-class PlaneDriver implements Driver {
+class PlaneDriver extends Driver {
 
     @Override
     public Transport createTransport() {

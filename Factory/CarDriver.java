@@ -1,5 +1,5 @@
 
-public class CarDriver implements Driver {
+public class CarDriver extends Driver {
 
     @Override
     public Transport createTransport() {

@@ -1,5 +1,5 @@
 
-public interface Driver {
+public abstract class Driver {
 
-    public Transport createTransport();
+    public abstract Transport createTransport();
 }
